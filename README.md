@@ -26,6 +26,8 @@ The protocol includes usage scheduling, remote control of the server, several ru
 
 #### 5. Recomendation: If you're not sure about using ssh, it's recommended to refer to the "Detailed tutorial on ssh", so that no further trouble is made to other users.
 
+That's all! Enjoy your time with the server!
+
 
 
 

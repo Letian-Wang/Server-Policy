@@ -22,9 +22,9 @@ The protocol includes usage scheduling, remote control of the server, several ru
             
 #### 3. If you're new or having problems with ssh, it's recommended to refer to the [Detailed tutorial on ssh](https://github.com/Letian-Wang/Server-Protocol/blob/main/Detailed%20tutorial%20on%20SSH.md), so that no further trouble is made to other users. The tutorial includes:
             1. Basic understanding and use of SSH
-            2. Adding your own account
-            3. Setting public keys for password-free logging in
-            4. Solutions to frequent problems
+            2. How to add your own account
+            3. How to set public keys for password-free logging in
+            4. Solutions to some frequent problems
 
 #### 4. Rule: do not manipulate others' account and the backend files before communicating with others and the server manager. 
 

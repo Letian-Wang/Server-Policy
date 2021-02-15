@@ -1,7 +1,7 @@
 # Server-Protocol
 To make effective use of the server and avoid usage conflict, you
 ***、---、___
-1. To avoid usage conflit, when you plan to use the server, you'll need to schedule and check the Server_Availability_Sheet:  
+## 1. To avoid usage conflit, when you plan to use the server, you'll need to schedule and check the Server_Availability_Sheet:  
             1. Sign your name and highlight the intensity of resource comsuption.
             
                 TODO: SHEET

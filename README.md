@@ -22,13 +22,13 @@ The protocol includes usage scheduling, remote control of the server, several ru
             
             4. For the server manager: you can update the port_num in the slack whenever you find a change, so that you won't be bothered by questions from clients
             
-#### 3. If you're new or looking for more setting with ssh, it's recommended to refer to the [Detailed tutorial on ssh](https://github.com/Letian-Wang/Server-Protocol/blob/main/Detailed%20tutorial%20on%20SSH.md), so that no further trouble is made to other users. The tutorial includes suggestions of:
+#### 3. If you're new or looking for more setting with ssh, it's recommended to refer to the [Detailed tutorial on ssh](https://github.com/Letian-Wang/Server-Protocol/blob/main/Detailed%20tutorial%20on%20SSH.md), so that no further trouble is made to other users. The tutorial includes:
             1. Simple understanding of how SSH works
             2. Different levels to work around ssh
             3. How to set up SSH
             4. How to create your own account safely
             5. How to log via public keys
-            6. How to manage the server
+            6. Suggestions to manage the server
             7. Solutions to some frequent problems
 
 #### 4. Rule: do not manipulate others' account and the backend files before communicating with others and the server manager. 

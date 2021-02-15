@@ -77,6 +77,7 @@
 
 #### Guide 3: 
 **If you want to log in without password by setting up public key: (all commands are run on your local computer)**
+
     1. Create RSA key on your own computer:
         mkdir -p $HOME/.ssh
         chmod 0700 $HOME/.ssh
@@ -94,6 +95,7 @@
 
 #### Guide 4: 
 **if your are managing the server and any thing goes wrong, you can check:**
+
     1. Whether the remote computer is turned on, and has a network connection.
     2. SSH server applications need to be installed and enabled.
         1. check if ssh server is installed: 
@@ -114,6 +116,7 @@
 
 #### Guide 5: 
 **Problem solving**
+
         1. if you are encountering:
                 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
                 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @

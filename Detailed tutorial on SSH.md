@@ -10,7 +10,7 @@
 
 #### 2. Different levels to work around ssh, depending on your familiarity and demand with ssh, 
 1. If you do not mind log in with other own account and do not want to get into detail, you can just follow [Guide 1](#Guide-1) to install openssh-client and connect to server using others' account (certainly under others' permission)  
-2. If you want to create your own account on the server via ssh, follow [Guide 2](#Guide-2) to create your account(will be using others' account temporarily), and folllow 1.3 to connect to the server  
+2. If you want to create your own account on the server via ssh, follow [Guide 2](#Guide-2) to create your account(will be using others' account temporarily)  
 3. If you want to log in your own account wighout password(which is safer), follow [Guide 3](#Guide-3) to generate public key
 
 
@@ -91,30 +91,27 @@
                 Offending key for IP in /home/user/.ssh/known_hosts:6
                 ...
 
-        problem description:
-            Each time the client is connected to the server, the host keys would be saved in the home/local_user_name/.ssh/known_hosts on the client side.
-            The host keys are used to comfirm that the client is connecting to the right server through the route used before, which can avoid being redirected to an imposter computer.
-            When the host keys are different from before, the ssh would warn to request a check on the host keys of the server.
-            The host keys are automatically generated upon installation of ssh-server. But could also be regenerated.
-
-            Such problem could simply spring from changes on the server(re-install ssh, ssh-keygen, system upgrade), but coulde also be inccured by a malicious man-in-the-middle attack. 
-            For the safety of our resources and codes on the server, you need to check with the manager to ensure the fingerprint is consistent with that on the server.
-            Fingerprint is the short-version host keys, need to be calculated by the 
-
-        for client: 
-            1. compare the fingerprint shown in the termnial with the table below: (find which key you're refering to) 
-                1. find which key is changed in the error message: in this example, we get the "ECDSA key"
-                2. find the fingerprint in the error message: in this example, we get the "SHA256:NjdBmIp/GqlpSvAM69JtFVlGZoQ6VRWnWSXXmpsZIlk"
-                3. Look
-                 in the terminal
-
-                TODO: TABLE
-                In this example, the terminal provide the fingerprint of "ECDSA key": ()
-
-            3. if the two fingerprints match well, you have 3 methods to solve this problem by manipulating your own computer:
+          problem description:
+              Each time the client is connected to the server, the host keys would be saved in the home/local_user_name/.ssh/known_hosts on the client side.  
+              The host keys are used to comfirm that the client is connecting to the right server through the route used before, which can avoid being redirected to an imposter computer.     
+              When the host keys are different from before, the ssh would warn to request a check on the host keys of the server.  
+              
+          Quick solution(one of the three would work):
                 1. ssh-keygen -R {host_name}
                 2. rm home/{local_user_name}/.ssh/known_hosts
-                3. just delete the 6 line of the /home/user/.ssh/known_hosts
+                3. just delete the {6 line}(shown in the error message) of the /home/user/.ssh/known_hosts
+          
+          Detailed solution(when you cannont solve by the quick solution):
+            The host keys are automatically generated upon installation of ssh-server. But could also be regenerated.  
+            Such problem could simply spring from changes on the server(re-install ssh, ssh-keygen, system upgrade), but coulde also be inccured by a malicious man-in-the-middle attack.  
+            For the safety of our resources and codes on the server, we'd better check with the manager to ensure the fingerprint is consistent with that on the server.
+            Fingerprint is the short-version host keys, need to be calculated by running some command
+
+        for client: 
+            1. Ask the manager for the fingerprint, and compare that with the fingerprint shown in the termnial:
+                1. find which key is shown in the error message: in this example, we get the "ECDSA key"
+                2. find the fingerprint in the error message: in this example, we get the "SHA256:NjdBmIp/GqlpSvAM69JtFVlGZoQ6VRWnWSXXmpsZIlk"
+                3. Compare that with fingerprint provided by the manager. If it's consistent, go on with the quick solution again. If still not work, we are under a malicious attack
 
         for server: 
             1. according to which key is changed, find the key on the server in the directories: (dsa, ecdsa, ed25519, rsa are different algorithms to generate public key)
@@ -125,13 +122,9 @@
                 /etc/ssh/ssh_host_rsa_key
             2. Generate the fingerprint by: 
                 ssh-keygen -l -f ssh_host_rsa_key.pub, 
-               provide it to the client for comparison
-                SHA256 is a new-version encoding of the the keys
-            3. Update the table above if 
+               provide it to the client for comparison. Note that SHA256 is a new-version encoding of the the keys
 
-            2. The system may undergoes a majory system upgrade
-            3. someone may have re-generated the host key by reinstalling the ssh, or in /etc/ssh/
-                ssh-keygen
+            3. The reason: The system may undergoes a majory system upgrade, or the keys are re-generated by reinstalling the ssh or by "ssh-keygen"
 
         Detailed explanation on public key/host key:
             public key: https://www.ssh.com/ssh/keygen/

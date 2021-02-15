@@ -50,8 +50,7 @@
     1. Create RSA key on your own computer:
         mkdir -p $HOME/.ssh
         chmod 0700 $HOME/.ssh
-        ssh-keygen -t rsa (Attention: this has been be run on your own computer, rather than on the sever, otherwise others users could not log in)
-
+        ssh-keygen -t rsa (Attention: this has been be run on your own computer, rather than on the sever, otherwise other users cannot not log in)
     2. Send RSA key to the server:
         ssh-copy-id -i ~/.ssh/id_rsa.pub {your_user}@{host_ip_address}
     3. log in via ssh free of passwd:

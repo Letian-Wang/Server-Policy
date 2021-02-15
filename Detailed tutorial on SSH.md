@@ -1,9 +1,9 @@
 # Detailed tutorial on SSH
 
 #### Simple understanding of how SSH works: 
-1. When the server installs an openssh-server and you install an openssh-client on your own computer, you can simply log in via ssh for remote control
-        2. When logging in, you need to know the account name, ip address of the server, and the port of the server, then run: ssh {user_account}@host_ip_address -p{port_num}
-        3. More details: public keys could replace the password for password-free logging in. Each connection will add the host keys of the server into the client for future check
+1. When the server installs an openssh-server and you install an openssh-client on your own computer, you can simply log in via ssh for remote control  
+2. When logging in, you need to know the account name, ip address of the server, and the port of the server, then run: ssh {user_account}@host_ip_address -p{port_num}  
+3. More details: public keys could replace the password for password-free logging in. Each connection will add the host keys of the server into the client for future check  
 
 #### Different levels to work around ssh, depending on your familiarity and demand with ssh, 
         1. If you do not mind log in with other own account and do not want to get into detail, you can just follow guide 1 to install openssh-client and connect to server using others' account (certainly under others' permission)

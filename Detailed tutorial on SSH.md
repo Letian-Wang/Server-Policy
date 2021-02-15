@@ -19,7 +19,7 @@
 <br/>
 
 
-#### 2. Different levels to work around ssh, depending on your familiarity and demand with ssh, 
+## 2. Different levels to work around ssh, depending on your familiarity and demand with ssh, 
 1. If you do not mind **logging in with other's account** and do not want to get into detail, you can just follow [Guide 1](#guide-1) to install openssh-client and connect to server using others' account (certainly under others' permission)  
 2. If you want to **create your own account** on the server via ssh, follow [Guide 2](#guide-2) to create your account(will be using others' account temporarily)  
 3. If you want to **log in your own account wighout password** (which is safer), follow [Guide 3](#guide-3) to generate public key
@@ -27,20 +27,20 @@
 <br/>
 
 
-#### 3. If you encount any problems, check [Guide 5](#guide-5) to see if any solution already existed
+## 3. If you encount any problems, check [Guide 5](#guide-5) to see if any solution already existed
         
 <br/>
 
-#### 4. If you are managing SSH server, check some basic operations in [Guide 4](#guide-4)
+## 4. If you are managing SSH server, check some basic operations in [Guide 4](#guide-4)
         
 <br/>
 
-#### 5. Note: A common mis-manipulation is to run "ssh-keygen" on the server side, which shoule actually be done on your own computer to generate public key, but would affect others' use of ssh if the command is run on server. We should avoid doing this.
+## 5. Note: A common mis-manipulation is to run "ssh-keygen" on the server side, which shoule actually be done on your own computer to generate public key, but would affect others' use of ssh if the command is run on server. We should avoid doing this.
         
 <br/>
 
 
-#### Guide 1: 
+## Guide 1: 
 **Basic setup of SSH: (all commands are run on your local computer)**
 
     1. (first time using ssh) check if ssh client is installed on local computer:
@@ -56,7 +56,7 @@
         
 <br/>
 
-#### Guide 2: 
+## Guide 2: 
 
 **if you want to create your own account on the server:**
 
@@ -75,7 +75,7 @@
             
 <br/>
 
-#### Guide 3: 
+## Guide 3: 
 **If you want to log in without password by setting up public key: (all commands are run on your local computer)**
 
     1. Create RSA key on your own computer:
@@ -93,7 +93,7 @@
         
 <br/>
 
-#### Guide 4: 
+## Guide 4: 
 **if your are managing the server and any thing goes wrong, you can check:**
 
     1. Whether the remote computer is turned on, and has a network connection.
@@ -114,7 +114,7 @@
         
 <br/>
 
-#### Guide 5: 
+## Guide 5: 
 **Problem solving**
 
         1. if you are encountering:

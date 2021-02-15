@@ -11,7 +11,7 @@ The protocol includes usage scheduling, remote control of the server, several ru
                 When the slot is green, you can append your name in the sheet and do some light jobs on the server. But high-intensity work is not recomended.   
                 When the slot is red, you're not recommended to use the server at the same time. you can schedule a late time or coordinate with the current user if you're in hurry.  
                 
-### 2. Remote control of the server:
+#### 2. Remote control of the server:
             1. The command to ssh into the server:
                         ssh {user_account}@{host_ip_address} -p{port_num}
                         
@@ -20,8 +20,13 @@ The protocol includes usage scheduling, remote control of the server, several ru
                         
             3. If you cannont log in, it is highly possible that the port_num is changed. Check and ask for the update in the "stack-overflow" channel on slack
 
-### 3. It's recomended to create your own virtual environment, so you're free to set your own settings and avoid setting conflict.
-### 4. Do not manipulate others' account and the backend files before communicating with others and the server manager. 
-### 5. If you're not sure about using ssh, it's recommended to refer to the "Detailed tutorial on ssh", so that no further trouble is made to other users.
+#### 3. Rule: do not manipulate others' account and the backend files before communicating with others and the server manager. 
+
+#### 4. Recommendation: create your own virtual environment, so you're free to set your own settings and avoid setting conflict.
+
+#### 5. Recomendation: If you're not sure about using ssh, it's recommended to refer to the "Detailed tutorial on ssh", so that no further trouble is made to other users.
+
+
+
 
 

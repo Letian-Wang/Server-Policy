@@ -9,7 +9,7 @@
             
 <br/>
 
-#### 1. Simple understanding of how SSH works: 
+## 1. Simple understanding of how SSH works: 
 1. When the server installs an openssh-server and you install an openssh-client on your own computer, you can simply log in via ssh for remote control
 2. When logging in, you need to know the account name, ip address of the server, and the port of the server, then run:
 

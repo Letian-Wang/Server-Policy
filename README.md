@@ -11,11 +11,12 @@ The content includes usage scheduling, remote control of the server, several rul
                 When the slot is green, you can append your name in the sheet and do some light jobs on the server. But high-intensity work is not recomended.   
                 When the slot is red, you're not recommended to use the server at the same time. you can schedule a late time or coordinate with the current user if you're in hurry.  
                 
-### 2. The command to ssh into the server:
-            '''
-            ssh {user_account}@host_ip_address -p{port_num}
-            '''
-           If you cannont log in, it is highly possible that the port_num is changed. Check the update in the "server" channel on slack
+### 2. Remote control of the server:
+         The command to ssh into the server:
+            ssh {user_account}@{host_ip_address} -p{port_num}
+         Currently, you can use:
+            ssh {user_account}@0.tcp.ngrok.io -p12783
+         If you cannont log in, it is highly possible that the port_num is changed. Check and ask for the update in the "server" channel on slack
            
            (TODO: server channel)
 

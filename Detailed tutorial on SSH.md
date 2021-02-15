@@ -1,9 +1,11 @@
 # Detailed tutorial on SSH
 ## This tutorial includes: 
-  1. [Simple understanding of how SSH works](#-1.-Simple-understanding-of-how-SSH-works-)
+  1. [Simple understanding of how SSH works](#Simple-understanding-of-how-SSH-works-)
   2. [How to set up SSH](#guide-1)
   3. [How to create your own account safely](#guide-2)
   4. [How to log via public keys](#guide-3)
+  5. [How to manage the server](#guide-4)
+  5. [Solutions to some frequent problems](#guide-5)
             
 <br/>
 

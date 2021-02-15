@@ -4,7 +4,6 @@ The content includes usage scheduling, remote control of the server, several rul
 
 #### 1. When you plan to use the server, you'll need to schedule and check the [Server Availability Sheet](https://docs.google.com/spreadsheets/d/1SJabt0CI8YMfprissTm2YH9iNwee4MdWShxkVchYhOw/edit?usp=sharing):  
             1. Sign your name and highlight the intensity of resource comsuption.  
-                Server Availability Sheet:   https://docs.google.com/spreadsheets/d/1SJabt0CI8YMfprissTm2YH9iNwee4MdWShxkVchYhOw/edit?usp=sharing
                 Green means you're doing some light jobs that do not compete on the resources with other users.   
                 Red means the load is intense and do not recommend simultaneous usage.   
                 

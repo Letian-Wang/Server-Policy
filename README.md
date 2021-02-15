@@ -3,11 +3,11 @@ This protocol is set for effective and safe use of the server, as well as avoidi
 The protocol includes usage scheduling, remote control of the server, several rules to follow, and a detailed tutorial on the use of ssh.
 
 #### 1. When you plan to use the server, you'll need to check and schedule on the [Server Availability Sheet](https://docs.google.com/spreadsheets/d/1SJabt0CI8YMfprissTm2YH9iNwee4MdWShxkVchYhOw/edit?usp=sharing):  
-            1. Sign your name and highlight the intensity of resource consumption.  
-                Green means you're doing some light jobs that do not compete on the resources with other users.   
-                Red means the load is intense and do not recommend simultaneous usage.   
+            1. Sigh up: sign your name and highlight the intensity of resource consumption.  
+                Green means you're doing some light-load jobs, so that others are allowed to do light-load tasks simultaneously.  
+                Red means your task is load-intense and do not recommend simultaneous use from other users.   
                 
-            2. If there is already someone else occupying the time slot:  
+            2. Check: If there is already someone else occupying the time slot:  
                 When the slot is green, you can append your name in the sheet and do some light jobs on the server. But high-intensity work is not recomended.   
                 When the slot is red, you're not recommended to use the server at the same time. you can schedule a late time or coordinate with the current user if you're in hurry.  
                 

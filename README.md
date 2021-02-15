@@ -19,15 +19,12 @@ The protocol includes usage scheduling, remote control of the server, several ru
                         ssh {user_account}@0.tcp.ngrok.io -p12783
                         
             3. If you cannont log in, it is highly possible that the port_num is changed. Check and ask for the update in the "stack-overflow" channel on slack
+            
+            4. If you're first time using ssh, it's recommended to refer to the "Detailed tutorial on ssh", so that no further trouble is made to other users.
 
 #### 3. Rule: do not manipulate others' account and the backend files before communicating with others and the server manager. 
 
 #### 4. Recommendation: create your own virtual environment, so you're free to set your own settings and avoid setting conflict.
-
-#### 5. Recomendation: If you're not sure about using ssh, it's recommended to refer to the "Detailed tutorial on ssh", so that no further trouble is made to other users.
-
-That's all! Enjoy your time with the server!
-
 
 
 

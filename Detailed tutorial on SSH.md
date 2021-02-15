@@ -27,7 +27,8 @@
 
 
 #### Guide 1: 
-if you are a client connecting to the server: (all commands are run on your local computer)
+**if you are a client connecting to the server: (all commands are run on your local computer)**
+
     1. (first time using ssh) check if ssh client is installed on local computer:
         ssh
     2. (first time using ssh) install ssh client:
@@ -38,7 +39,11 @@ if you are a client connecting to the server: (all commands are run on your loca
     Detailed intro to ssh (including how to install): 
         https://phoenixnap.com/kb/ssh-to-connect-to-remote-server-linux-or-windows
         
-#### Guide 2: if you want to create your own account on the server:
+        
+<br/>
+#### Guide 2: 
+**if you want to create your own account on the server:**
+
     1. log in the server by an existing account:
         ssh {existing_user}@{host_ip_address} -p{port_num}
     2. add new user:

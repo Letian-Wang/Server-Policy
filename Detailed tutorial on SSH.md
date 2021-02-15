@@ -77,7 +77,7 @@
         ssh-keygen -l -f ssh_host_ecdsa_key.pub
     5. Firewall settings need to allow the remote connection.
 
-### Guide 5: Problem solving
+#### Guide 5: Problem solving
         1. if you are encountering:
                 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
                 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
@@ -89,43 +89,42 @@
                 Offending key for IP in /home/user/.ssh/known_hosts:6
                 ...
 
-          problem description:
-              Each time the client is connected to the server, the host keys would be saved in the home/local_user_name/.ssh/known_hosts on the client side.  
-              The host keys are used to comfirm that the client is connecting to the right server through the route used before, which can avoid being redirected to an imposter computer.     
-              When the host keys are different from before, the ssh would warn to request a check on the host keys of the server.  
+            problem description:
+                Each time the client is connected to the server, the host keys would be saved in the home/local_user_name/.ssh/known_hosts on the client side.  
+               The host keys are used to comfirm that the client is connecting to the right server through the route used before, which can avoid being redirected to an imposter computer.     
+               When the host keys are different from before, the ssh would warn to request a check on the host keys of the server.  
               
-          Quick solution(one of the three would work):
-                1. ssh-keygen -R {host_name}
-                2. rm home/{local_user_name}/.ssh/known_hosts
-                3. just delete the {6 line}(shown in the error message) of the /home/user/.ssh/known_hosts
+           Quick solution(one of the three would work):
+                  1. ssh-keygen -R {host_name}
+                 2. rm home/{local_user_name}/.ssh/known_hosts
+                  3. just delete the {6 line}(shown in the error message) of the /home/user/.ssh/known_hosts
           
-          Detailed solution(when you cannont solve by the quick solution):
-            The host keys are automatically generated upon installation of ssh-server. But could also be regenerated.  
-            Such problem could simply spring from changes on the server(re-install ssh, ssh-keygen, system upgrade), but coulde also be inccured by a malicious man-in-the-middle attack.  
-            For the safety of our resources and codes on the server, we'd better check with the manager to ensure the fingerprint is consistent with that on the server.
-            Fingerprint is the short-version host keys, need to be calculated by running some command
+           Detailed solution(when you cannont solve by the quick solution):
+              The host keys are automatically generated upon installation of ssh-server. But could also be regenerated.  
+              Such problem could simply spring from changes on the server(re-install ssh, ssh-keygen, system upgrade), but coulde also be inccured by a malicious man-in-the-middle attack.  
+              For the safety of our resources and codes on the server, we'd better check with the manager to ensure the fingerprint is consistent with that on the server.
+             Fingerprint is the short-version host keys, need to be calculated by running some command
 
-        for client: 
-            1. Ask the manager for the fingerprint, and compare that with the fingerprint shown in the termnial:
-                1. find which key is shown in the error message: in this example, we get the "ECDSA key"
-                2. find the fingerprint in the error message: in this example, we get the "SHA256:NjdBmIp/GqlpSvAM69JtFVlGZoQ6VRWnWSXXmpsZIlk"
-                3. Compare that with fingerprint provided by the manager. If it's consistent, go on with the quick solution again. If still not work, we are under a malicious attack
+          for client: 
+             1. Ask the manager for the fingerprint, and compare that with the fingerprint shown in the termnial:
+                  1. find which key is shown in the error message: in this example, we get the "ECDSA key"
+                  2. find the fingerprint in the error message: in this example, we get the "SHA256:NjdBmIp/GqlpSvAM69JtFVlGZoQ6VRWnWSXXmpsZIlk"
+                 3. Compare that with fingerprint provided by the manager. If it's consistent, go on with the quick solution again. If still not work, we are under a malicious attack
 
-        for server: 
-            1. according to which key is changed, find the key on the server in the directories: (dsa, ecdsa, ed25519, rsa are different algorithms to generate public key)
-            https://www.unixtutorial.org/how-to-inspect-ssh-key-fingerprints/
-                /etc/ssh/ssh_host_dsa_key
-                /etc/ssh/ssh_host_ecdsa_key
-                /etc/ssh/ssh_host_ed25519_key
-                /etc/ssh/ssh_host_rsa_key
-            2. Generate the fingerprint by: 
-                ssh-keygen -l -f ssh_host_rsa_key.pub, 
-               provide it to the client for comparison. Note that SHA256 is a new-version encoding of the the keys
+         for server: 
+             1. according to which key is changed, find the key on the server in the directories: (dsa, ecdsa, ed25519, rsa are different algorithms to generate public key)
+                  /etc/ssh/ssh_host_dsa_key
+                  /etc/ssh/ssh_host_ecdsa_key
+                  /etc/ssh/ssh_host_ed25519_key
+                  /etc/ssh/ssh_host_rsa_key
+             2. Generate the fingerprint by: 
+                  ssh-keygen -l -f ssh_host_rsa_key.pub, 
+                provide it to the client for comparison. Note that SHA256 is a new-version encoding of the the keys
 
-            3. The reason: The system may undergoes a majory system upgrade, or the keys are re-generated by reinstalling the ssh or by "ssh-keygen"
+             3. The reason: The system may undergoes a majory system upgrade, or the keys are re-generated by reinstalling the ssh or by "ssh-keygen"
 
-        Detailed explanation on public key/host key:
-            public key: https://www.ssh.com/ssh/keygen/
-            client operation: https://help.dreamhost.com/hc/en-us/articles/217239087-Updating-host-keys
-            host key: https://envsci.rutgers.edu/computing_services/docs/Update_Host_Key_in_SSH.pdf
-            generate fingerprint: https://www.unixtutorial.org/how-to-inspect-ssh-key-fingerprints/
+         Detailed explanation on public key/host key:
+             public key: https://www.ssh.com/ssh/keygen/
+             client operation: https://help.dreamhost.com/hc/en-us/articles/217239087-Updating-host-keys
+             host key: https://envsci.rutgers.edu/computing_services/docs/Update_Host_Key_in_SSH.pdf
+             generate fingerprint: https://www.unixtutorial.org/how-to-inspect-ssh-key-fingerprints/

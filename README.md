@@ -20,7 +20,7 @@ The protocol includes usage scheduling, remote control of the server, several ru
                         
             3. If you cannont log in, it is highly possible that the port_num is changed. Check and ask for the update in the "stack-overflow" channel on slack
             
-            4. For the server manager: you can update the port_num in the slack whenever you find a change, so that you won't be bothered by questions by clients
+            4. For the server manager: you can update the port_num in the slack whenever you find a change, so that you won't be bothered by questions from clients
             
 #### 3. If you're new or having problems with ssh, it's recommended to refer to the [Detailed tutorial on ssh](https://github.com/Letian-Wang/Server-Protocol/blob/main/Detailed%20tutorial%20on%20SSH.md), so that no further trouble is made to other users. The tutorial includes:
             1. Simple understanding of how SSH works

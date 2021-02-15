@@ -1,10 +1,10 @@
 # Server-Protocol
-This protocol is set to for effectiveand and safe use of the server, as well as avoiding usage conflict. 
+This protocol is set to for effectiveand and safe use of the server, as well as avoiding usage conflict.   
 The content includes usage scheduling, remote control of the server, several rules to follow, a detailed tutorial on the use of ssh.
 
-#### 1. When you plan to use the server, you'll need to schedule and check the Server_Availability_Sheet:  
+#### 1. When you plan to use the server, you'll need to schedule and check the Server Availability Sheet:  
             1. Sign your name and highlight the intensity of resource comsuption.  
-                TODO: SHEET  
+                Server Availability Sheet:   https://docs.google.com/spreadsheets/d/1SJabt0CI8YMfprissTm2YH9iNwee4MdWShxkVchYhOw/edit?usp=sharing
                 Green means you're doing some light jobs that do not compete on the resources with other users.   
                 Red means the load is intense and do not recommend simultaneous usage.   
                 

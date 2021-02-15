@@ -80,3 +80,62 @@
         ssh-keygen -l -f ssh_host_ecdsa_key.pub
     5. Firewall settings need to allow the remote connection.
 
+Problem solving:
+        1. if you are encountering:
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        ...
+        The fingerprint for the ECDSA key sent by the remote host is
+        SHA256:NjdBmIp/GqlpSvAM69JtFVlGZoQ6VRWnWSXXmpsZIlk.
+        ...
+        Offending key for IP in /home/user/.ssh/known_hosts:6
+        ...
+
+        problem description:
+            Each time the client is connected to the server, the host keys would be saved in the home/local_user_name/.ssh/known_hosts on the client side.
+            The host keys are used to comfirm that the client is connecting to the right server through the route used before, which can avoid being redirected to an imposter computer.
+            When the host keys are different from before, the ssh would warn to request a check on the host keys of the server.
+            The host keys are automatically generated upon installation of ssh-server. But could also be regenerated.
+
+            Such problem could simply spring from changes on the server(re-install ssh, ssh-keygen, system upgrade), but coulde also be inccured by a malicious man-in-the-middle attack. 
+            For the safety of our resources and codes on the server, you need to check with the manager to ensure the fingerprint is consistent with that on the server.
+            Fingerprint is the short-version host keys, need to be calculated by the 
+
+        for client: 
+            1. compare the fingerprint shown in the termnial with the table below: (find which key you're refering to) 
+                1. find which key is changed in the error message: in this example, we get the "ECDSA key"
+                2. find the fingerprint in the error message: in this example, we get the "SHA256:NjdBmIp/GqlpSvAM69JtFVlGZoQ6VRWnWSXXmpsZIlk"
+                3. Look
+                 in the terminal
+
+                TODO: TABLE
+                In this example, the terminal provide the fingerprint of "ECDSA key": ()
+
+            3. if the two fingerprints match well, you have 3 methods to solve this problem by manipulating your own computer:
+                1. ssh-keygen -R {host_name}
+                2. rm home/{local_user_name}/.ssh/known_hosts
+                3. just delete the 6 line of the /home/user/.ssh/known_hosts
+
+        for server: 
+            1. according to which key is changed, find the key on the server in the directories: (dsa, ecdsa, ed25519, rsa are different algorithms to generate public key)
+            https://www.unixtutorial.org/how-to-inspect-ssh-key-fingerprints/
+                /etc/ssh/ssh_host_dsa_key
+                /etc/ssh/ssh_host_ecdsa_key
+                /etc/ssh/ssh_host_ed25519_key
+                /etc/ssh/ssh_host_rsa_key
+            2. Generate the fingerprint by: 
+                ssh-keygen -l -f ssh_host_rsa_key.pub, 
+               provide it to the client for comparison
+                SHA256 is a new-version encoding of the the keys
+            3. Update the table above if 
+
+            2. The system may undergoes a majory system upgrade
+            3. someone may have re-generated the host key by reinstalling the ssh, or in /etc/ssh/
+                ssh-keygen
+
+        Detailed explanation on public key/host key:
+            public key: https://www.ssh.com/ssh/keygen/
+            client operation: https://help.dreamhost.com/hc/en-us/articles/217239087-Updating-host-keys
+            host key: https://envsci.rutgers.edu/computing_services/docs/Update_Host_Key_in_SSH.pdf
+            generate fingerprint: https://www.unixtutorial.org/how-to-inspect-ssh-key-fingerprints/

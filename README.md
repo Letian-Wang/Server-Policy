@@ -16,7 +16,7 @@ To make effective use of the server and avoid usage conflict, you
                 
                 When the slot is red, you're not recommended to use the server at the same time. you can schedule a late time or coordinate with the current user if you're in hurry.
                 
-        2. The command to ssh into the server:
+## 2. The command to ssh into the server:
         
             ssh {user_account}@host_ip_address -p{port_num}
             

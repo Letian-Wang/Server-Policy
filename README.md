@@ -1,6 +1,6 @@
 # Server-Protocol
 To make effective use of the server and avoid usage conflict, you
-***、---、___
+
 #### 1. When you plan to use the server, you'll need to schedule and check the Server_Availability_Sheet:  
             1. Sign your name and highlight the intensity of resource comsuption.  
                 TODO: SHEET  
@@ -12,9 +12,9 @@ To make effective use of the server and avoid usage conflict, you
                 When the slot is red, you're not recommended to use the server at the same time. you can schedule a late time or coordinate with the current user if you're in hurry.  
                 
 ### 2. The command to ssh into the server:
-        
+            '''
             ssh {user_account}@host_ip_address -p{port_num}
-            
+            '''
            If you cannont log in, it is highly possible that the port_num is changed. Check the update in the "server" channel on slack
            
            (TODO: server channel)

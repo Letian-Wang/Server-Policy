@@ -4,26 +4,38 @@
   2. [How to set up SSH](#guide-1)
   3. [How to create your own account safely](#guide-2)
   4. [How to log via public keys](#guide-3)
-    
+            
+<br/>
+
 #### 1. Simple understanding of how SSH works: 
 1. When the server installs an openssh-server and you install an openssh-client on your own computer, you can simply log in via ssh for remote control
 2. When logging in, you need to know the account name, ip address of the server, and the port of the server, then run:
 
                ssh {user_account}@host_ip_address -p{port_num}  
 3. More details: public keys could replace the password for password-free logging in. Each connection will add the host keys of the server into the client for future check  
+        
+<br/>
 
 
 #### 2. Different levels to work around ssh, depending on your familiarity and demand with ssh, 
 1. If you do not mind **logging in with other's account** and do not want to get into detail, you can just follow [Guide 1](#guide-1) to install openssh-client and connect to server using others' account (certainly under others' permission)  
 2. If you want to **create your own account** on the server via ssh, follow [Guide 2](#guide-2) to create your account(will be using others' account temporarily)  
 3. If you want to **log in your own account wighout password** (which is safer), follow [Guide 3](#guide-3) to generate public key
+        
+<br/>
 
 
 #### 3. If you encount any problems, check [Guide 5](#guide-5) to see if any solution already existed
+        
+<br/>
 
 #### 4. If you are managing SSH server, check some basic operations in [Guide 4](#guide-4)
+        
+<br/>
 
 #### 5. Note: A common mis-manipulation is to run "ssh-keygen" on the server side, which shoule actually be done on your own computer to generate public key, but would affect others' use of ssh if the command is run on server. We should avoid doing this.
+        
+<br/>
 
 
 #### Guide 1: 
@@ -58,8 +70,11 @@
 
     Detailed explanation on adding account: 
         https://www.cyberciti.biz/faq/create-a-user-account-on-ubuntu-linux/
-    
-#### Guide 3: If you want to log in without password by setting up public key: (all commands are run on your local computer)
+            
+<br/>
+
+#### Guide 3: 
+**If you want to log in without password by setting up public key: (all commands are run on your local computer)**
     1. Create RSA key on your own computer:
         mkdir -p $HOME/.ssh
         chmod 0700 $HOME/.ssh
@@ -72,8 +87,11 @@
     Detailed explanation on logging without password via public key:
         https://www.cyberciti.biz/faq/ubuntu-18-04-setup-ssh-public-key-authentication/
 
+        
+<br/>
 
-#### Guide 4: if your are managing the server and any thing goes wrong, you can check:
+#### Guide 4: 
+**if your are managing the server and any thing goes wrong, you can check:**
     1. Whether the remote computer is turned on, and has a network connection.
     2. SSH server applications need to be installed and enabled.
         1. check if ssh server is installed: 
@@ -89,8 +107,11 @@
         ssh-keygen -l -f ssh_host_ed25519_key.pub
         ssh-keygen -l -f ssh_host_ecdsa_key.pub
     5. Firewall settings need to allow the remote connection.
+        
+<br/>
 
-#### Guide 5: Problem solving
+#### Guide 5: 
+**Problem solving**
         1. if you are encountering:
                 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
                 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @

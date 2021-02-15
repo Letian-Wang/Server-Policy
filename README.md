@@ -1,5 +1,6 @@
 # Server-Protocol
-To make effective use of the server and avoid usage conflict, you
+This protocol is set to for effectiveand and safe use of the server, as well as avoiding usage conflict. 
+The content includes usage scheduling, remote control of the server, several rules to follow, a detailed tutorial on the use of ssh.
 
 #### 1. When you plan to use the server, you'll need to schedule and check the Server_Availability_Sheet:  
             1. Sign your name and highlight the intensity of resource comsuption.  

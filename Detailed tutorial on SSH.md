@@ -26,7 +26,8 @@
 #### 5. Note: A common mis-manipulation is to run "ssh-keygen" on the server side, which shoule actually be done on your own computer to generate public key, but would affect others' use of ssh if the command is run on server. We should avoid doing this.
 
 
-#### Guide 1: if you are a client connecting to the server: (all commands are run on your local computer)
+#### Guide 1: 
+if you are a client connecting to the server: (all commands are run on your local computer)
     1. (first time using ssh) check if ssh client is installed on local computer:
         ssh
     2. (first time using ssh) install ssh client:

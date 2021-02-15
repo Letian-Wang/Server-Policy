@@ -14,12 +14,11 @@
 3. If you want to log in your own account wighout password(which is safer), follow [Guide 3](#Guide-3) to generate public key
 
 
-#### 3. If you encount any problems, check the problem solving in [Guide 5](#guide-5) to see if any solution already existed
+#### 3. If you encount any problems, check [Guide 5](#guide-5) to see if any solution already existed
 
 #### 4. If you are managing SSH server, check some basic operations in [Guide 4](#guide-4)
 
-
-#### 4. Note: A common mis-manipulation is to run "ssh-keygen" on the server side, which shoule actually be done on your own computer to generate public key, but would affect others' use of ssh if the command is run on server.
+#### 5. Note: A common mis-manipulation is to run "ssh-keygen" on the server side, which shoule actually be done on your own computer to generate public key, but would affect others' use of ssh if the command is run on server. We should avoid doing this.
 
 
 #### Guide 1: if you are a client connecting to the server: (all commands are run on your local computer)
@@ -34,13 +33,13 @@
         https://phoenixnap.com/kb/ssh-to-connect-to-remote-server-linux-or-windows
         
 #### Guide 2: if you want to create your own account on the server:
-    1. log in the server by an existing account: (On your own computer)
+    1. log in the server by an existing account:
         ssh {existing_user}@{host_ip_address} -p{port_num}
-    2. add new user: (on the server)
+    2. add new user:
         sudo useradd -s /bin/bash -d /home/{new_user}/ -m -G sudo {new_user}
-    3. set the password for the new user: (on the server)
+    3. set the password for the new user:
         sudo passwd {new_user}
-    4. (optional) if you mis-create your account, you can delete your account as below, and go back to step 2: (on the server)
+    4. (optional) if you mis-create your account, you can delete your account as below, and go back to step 2:
         sudo deluser --remove-home {newuser}
     5. (Note) Do not run ssh-keygen on the server side, this could changed the host keys and others users could not log in
 

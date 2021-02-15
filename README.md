@@ -1,5 +1,5 @@
 # Server Protocol in ICL
-This protocol is set for effective and safe use of the server, as well as avoiding usage conflict.   
+This protocol is set for effective and safe use of the server.  
 The protocol includes usage scheduling, remote control of the server, several rules to follow, and a detailed tutorial on the use of ssh.
 
 #### 1. When you plan to use the server, you'll need to check and schedule on the [Server Availability Sheet](https://docs.google.com/spreadsheets/d/1SJabt0CI8YMfprissTm2YH9iNwee4MdWShxkVchYhOw/edit?usp=sharing):  

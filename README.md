@@ -1,8 +1,8 @@
 # Server Protocol in ICL
-This protocol is set to for effectiveand and safe use of the server, as well as avoiding usage conflict.   
+This protocol is set for effective and safe use of the server, as well as avoiding usage conflict.   
 The protocol includes usage scheduling, remote control of the server, several rules to follow, a detailed tutorial on the use of ssh.
 
-#### 1. When you plan to use the server, you'll need to schedule and check the [Server Availability Sheet](https://docs.google.com/spreadsheets/d/1SJabt0CI8YMfprissTm2YH9iNwee4MdWShxkVchYhOw/edit?usp=sharing):  
+#### 1. When you plan to use the server, you'll need to check and schedule on the [Server Availability Sheet](https://docs.google.com/spreadsheets/d/1SJabt0CI8YMfprissTm2YH9iNwee4MdWShxkVchYhOw/edit?usp=sharing):  
             1. Sign your name and highlight the intensity of resource consumption.  
                 Green means you're doing some light jobs that do not compete on the resources with other users.   
                 Red means the load is intense and do not recommend simultaneous usage.   
@@ -20,7 +20,11 @@ The protocol includes usage scheduling, remote control of the server, several ru
                         
             3. If you cannont log in, it is highly possible that the port_num is changed. Check and ask for the update in the "stack-overflow" channel on slack
             
-#### 3. If you're new or having problems with ssh, it's recommended to refer to the [Detailed tutorial on ssh](https://github.com/Letian-Wang/Server-Protocol/blob/main/Detailed%20tutorial%20on%20SSH.md), so that no further trouble is made to other users.
+#### 3. If you're new or having problems with ssh, it's recommended to refer to the [Detailed tutorial on ssh](https://github.com/Letian-Wang/Server-Protocol/blob/main/Detailed%20tutorial%20on%20SSH.md), so that no further trouble is made to other users. The tutorial includes:
+            1. Basic understanding and use of SSH
+            2. Adding your own account
+            3. Setting public keys for password-free logging in
+            4. Solutions to frequent problems
 
 #### 4. Rule: do not manipulate others' account and the backend files before communicating with others and the server manager. 
 

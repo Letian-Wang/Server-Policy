@@ -41,7 +41,9 @@
         
         
 <br/>
+
 #### Guide 2: 
+
 **if you want to create your own account on the server:**
 
     1. log in the server by an existing account:

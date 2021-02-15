@@ -82,17 +82,17 @@
         ssh-keygen -l -f ssh_host_ecdsa_key.pub
     5. Firewall settings need to allow the remote connection.
 
-Problem solving:
+### Guide 5: Problem solving
         1. if you are encountering:
-        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
-        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        ...
-        The fingerprint for the ECDSA key sent by the remote host is
-        SHA256:NjdBmIp/GqlpSvAM69JtFVlGZoQ6VRWnWSXXmpsZIlk.
-        ...
-        Offending key for IP in /home/user/.ssh/known_hosts:6
-        ...
+                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                ...
+                The fingerprint for the ECDSA key sent by the remote host is
+                SHA256:NjdBmIp/GqlpSvAM69JtFVlGZoQ6VRWnWSXXmpsZIlk.
+                ...     
+                Offending key for IP in /home/user/.ssh/known_hosts:6
+                ...
 
         problem description:
             Each time the client is connected to the server, the host keys would be saved in the home/local_user_name/.ssh/known_hosts on the client side.

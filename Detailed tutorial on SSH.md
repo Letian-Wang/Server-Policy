@@ -10,11 +10,11 @@
 
 
 #### 2. Different levels to work around ssh, depending on your familiarity and demand with ssh, 
-        1. If you do not mind log in with other own account and do not want to get into detail, you can just follow [Guide 1](#Guide-1) to install openssh-client and connect to server using others' account (certainly under others' permission)
+1. If you do not mind log in with other own account and do not want to get into detail, you can just follow [Guide 1](#Guide-1) to install openssh-client and connect to server using others' account (certainly under others' permission)
 
-2. If you want to create your own account on the server via ssh, follow guide 2 to create your account(will be using others' account temporarily), and folllow 1.3 to connect to the server
+2. If you want to create your own account on the server via ssh, follow [Guide 2](#Guide-2) to create your account(will be using others' account temporarily), and folllow [1.3](#-1.-simple-understanding-of-how-ssh-works:) to connect to the server
 
-3. If you want to log in your own account wighout password(which is safer), follow guide 3 to generate public key
+3. If you want to log in your own account wighout password(which is safer), follow [Guide 3](#Guide-3) to generate public key
 
 
 #### 3. If you encount any problems, check the problem solving in Guide 5 to see if any solution already existed

@@ -1,6 +1,6 @@
 # Detailed tutorial on SSH
 ## This tutorial includes: 
-  1. [Simple understanding of how SSH works](#-1.-Simple-understanding-of-how-SSH-works:-)
+  1. [Simple understanding of how SSH works](#-1.-Simple-understanding-of-how-SSH-works-)
   2. [How to set up SSH](#guide-1)
   3. [How to create your own account safely](#guide-2)
   4. [How to log via public keys](#guide-3)
@@ -39,7 +39,7 @@
 
 
 #### Guide 1: 
-**if you are a client connecting to the server: (all commands are run on your local computer)**
+**Basic setup of SSH: (all commands are run on your local computer)**
 
     1. (first time using ssh) check if ssh client is installed on local computer:
         ssh
